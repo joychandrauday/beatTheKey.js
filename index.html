@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>
-    
+
+<body class="bg-[#010313]">
+    <main class="min-h-screen">
+        <!-- home ui -->
+        <div id="homeUi" class="home-ui text-white flex flex-col flex-wrap items-center min-h-screen justify-center">
+            <h1 class="font-bold anton-regular uppercase text-7xl tracking-wider">beat the keyboard.</h1>
+            <p class="font-poppins py-4">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+            <button id="play-btn" class="btn btn-danger bg-white capitalize font-bold px-7" onclick="play()">play now</button>
+        </div>
+        <!-- game ui -->
+        <div id="gameUi" class="game-ui text-white flex flex-col flex-wrap items-center min-h-screen justify-center hidden">
+            <div class="game-ui-wrapper">
+                <div class="game-screen">
+                    <div
+                    class="game-screen artboard artboard-horizontal phone-1 border-8 border border-slate-700 backdrop-blur-lg flex items-center justify-center relative">
+                        <p class="absolute top-0 bg-slate-700 px-4">Don't watch keyboard  while playing...</p>
+                        <h1 id="currentAlphabet"  class="font-bold text-8xl uppercase">y</h1>
+                    </div>
+                </div>
+                <div class="keyboard pt-8 ">
+                    <div class="flex justify-center gap-1 my-1 w-full text-black">
+                        <kbd id="q" class="kbd">q</kbd>
+                        <kbd id="w" class="kbd">w</kbd>
+                        <kbd id="e" class="kbd">e</kbd>
+                        <kbd id="r" class="kbd">r</kbd>
+                        <kbd id="t" class="kbd">t</kbd>
+                        <kbd id="y" class="kbd">y</kbd>
+                        <kbd id="u" class="kbd">u</kbd>
+                        <kbd id="i" class="kbd">i</kbd>
+                        <kbd id="o" class="kbd">o</kbd>
+                        <kbd id="p" class="kbd">p</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full text-black">
+                        <kbd id="a" class="kbd">a</kbd>
+                        <kbd id="s" class="kbd">s</kbd>
+                        <kbd id="d" class="kbd">d</kbd>
+                        <kbd id="f" class="kbd">f</kbd>
+                        <kbd id="g" class="kbd">g</kbd>
+                        <kbd id="h" class="kbd">h</kbd>
+                        <kbd id="j" class="kbd">j</kbd>
+                        <kbd id="k" class="kbd">k</kbd>
+                        <kbd id="l" class="kbd">l</kbd>
+                    </div>
+                    <div class="flex justify-center gap-1 my-1 w-full text-black">
+                        <kbd id="z" class="kbd">z</kbd>
+                        <kbd id="x" class="kbd">x</kbd>
+                        <kbd id="c" class="kbd">c</kbd>
+                        <kbd id="v" class="kbd">v</kbd>
+                        <kbd id="b" class="kbd">b</kbd>
+                        <kbd id="n" class="kbd">n</kbd>
+                        <kbd id="m" class="kbd">m</kbd>
+                        <kbd id="/" class="kbd">/</kbd>
+                    </div>
+                </div>
+                <div class="game-elements flex justify-between pt-16 gap-x-[500px]">
+                    <div class="life py-2 px-4 rounded-full bg-[#360490] text-center ">
+                        <h3 class="text-white capitalize font-bold">life <i  id="lifeIcon" class="fa-solid fa-heart-circle-bolt"></i> <span id="lifeCard">5</span></h3>
+                    </div>
+                    <div class="score py-2 px-4 rounded-full bg-[#360490] text-center ">
+                        <h3 class="text-white capitalize font-bold">score <i id="scoreIcon" class="fa-solid fa-star"></i> <span id="scoreCard">0</span></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- score ui -->
+        <div id="scoreUi" class="score-ui text-white flex flex-col flex-wrap items-center min-h-screen justify-center hidden">
+            <div class="score text-center p-4 rounded-xl backdrop-blur-3xl shadow-3xl ">
+                <h1 class="font-extrabold uppercase text-4xl">score: <span id="totalScoreU">0</span></h1>
+                <button id="play-btn" class="btn btn-danger bg-white capitalize font-bold px-8 my-2 " onclick="playAgain()">play again</button>
+                <p>Practice will make you Pro.</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/utility.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/tailwind.config.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,33 @@
+.font-poppins {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.anton-regular {
+    font-family: "Anton", sans-serif;
+    font-style: normal;
+}
+
+main {
+    background: url(/images/background.png);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.game-screen {
+
+    text-align: center;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.artboard.phone-1.artboard-horizontal, .artboard.phone-1.horizontal {
+    height: 230px !important;
+}
+
+.kbd {
+    cursor: pointer;
+}
