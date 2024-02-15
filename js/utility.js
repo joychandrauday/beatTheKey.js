@@ -27,30 +27,13 @@ function removeKeyColorById(elementId) {
     const element = document.getElementById(elementId);
     element.classList.remove('bg-orange-400');
 }
-
-function scoreUpdateById(scoreId) {
-    //score update
-    const scoreElement = document.getElementById(scoreId);
-    const currentScoreText = scoreElement.innerText;
-    const currentScore = parseInt(currentScoreText);
-    //update
-    return currentScore;
-
-}
-function lifeUpdateById(lifeId) {
-    //score update
-    const lifeElement = document.getElementById(lifeId);
-    const currentLifeText = lifeElement.innerText;
-    const currentLife = parseInt(currentLifeText);
-    return currentLife;
-
-
-}
-
-
 function animateScoreById(param) {
     const icon = document.getElementById(param);
     icon.style.color = 'red';
+}
+function reAnimateScoreById(param) {
+    const icon = document.getElementById(param);
+    icon.style.color = 'white';
 }
 function newElementValueUpdate(valueId,value) {
 

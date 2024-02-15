@@ -31,3 +31,6 @@ main {
 .kbd {
     cursor: pointer;
 }
+#currentAlphabet{
+    text-shadow: -6px 6px #010313;
+}
