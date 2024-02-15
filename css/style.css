@@ -9,7 +9,7 @@
 }
 
 main {
-    background: url(/images/background.png);
+    background: url('https://github.com/joychandrauday/beatTheKey.js/blob/main/images/background.png?raw=true');
     background-size: 30%;
     background-repeat: no-repeat;
     background-position: center;
